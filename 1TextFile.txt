@@ -1,0 +1,7 @@
+﻿Front me
+Papers,About,Subject,contact{ me right sidebar remove kiya}
+login page me changes kiya hai
+
+
+Admin paper X
+Admin Question X
