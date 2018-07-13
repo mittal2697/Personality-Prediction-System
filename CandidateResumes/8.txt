@@ -1,0 +1,30 @@
+﻿ManageCandidates.aspx   
+SearchCV.aspx
+Admin_ManageJobs.aspx
+
+
+PostResume.aspx   === Candidate_Registration3.aspx 
+
+
+
+Updations
+
+LoginRegister.cs
+PostResume.cs&.aspx (Headings/subHeadings Thik Kerni h And Block Banane h)
+MyAccountProfile.cs&.aspx (Submit Button Center me lana h )
+Inner.master (link updated PostResume)
+AdminManageJob.aspx (Complete updated)
+AdminMembemanage.aspx (update kiya h thoda)
+
+
+
+06/2/2018
+
+Search_candidate (Codding Complete) 
+AdminHome
+Admin Member(Unwanted Comment DELETE Kerni h )
+
+
+
+
+

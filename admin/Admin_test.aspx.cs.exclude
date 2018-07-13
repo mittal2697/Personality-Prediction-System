@@ -1,0 +1,86 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class admin_Admin_test : System.Web.UI.Page
+{
+    ClsConnection c1 = new ClsConnection();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Session["AdminId"] == null)
+        {
+            Response.Redirect("index.aspx");
+        }
+        if (!IsPostBack)
+        {
+            lbl_PaperId.Text = Session["PaperId"].ToString();
+            FillCategory();
+            FillQuestion();
+        }
+    }
+
+    private void FillCategory()
+    {
+        string sql;
+        sql = " SELECT tbl_Category.* FROM tbl_PaperQuestionCategory, tbl_Category  ";
+        sql = sql + " WHERE tbl_PaperQuestionCategory.CategoryId = tbl_Category.CategoryId ";
+        sql = sql + " and enablestatus =1 and PaperId=" + lbl_PaperId.Text;
+
+        ddl_CategoryShow.DataSource = c1.SelectDs(sql);
+        ddl_CategoryShow.DataTextField = "categoryName";
+        ddl_CategoryShow.DataValueField = "categoryId";
+        ddl_CategoryShow.DataBind();
+        ddl_CategoryShow.Items.Insert(0, new ListItem("--Select Q Section--", "0"));
+
+
+    }
+    public void FillQuestion()
+    {
+        string str, sql;
+        int cnt;
+
+        if (lbl_PaperId.Text != "")
+        {
+            str = " SELECT '../'+Question_Url AS Question_Url1, '../'+Explanation_Url AS Explanation_Url1 , tbl_Question.*, tbl_ResultDetails.Answer as GivenAnswer FROM tbl_Result, tbl_ResultDetails , tbl_Question ";
+            str = str + " WHERE tbl_Result.ResultId = tbl_ResultDetails.ResultId ";
+            str = str + " and tbl_ResultDetails.QuestionId = tbl_Question.QuestionId ";
+            str = str + " and EmailId='" + Session["EmailId"].ToString() + "' ";
+            str = str + " and PaperId=" + lbl_PaperId.Text;
+
+            if (ddl_CategoryShow.SelectedIndex > 0)
+            {
+                str = str + " AND QuestionCategoryId=" + ddl_CategoryShow.SelectedValue.ToString();
+            }
+
+            if (ddl_DifficultyLevel_Show.SelectedIndex > 0)
+            {
+                str = str + " AND DifficultyLevel=" + ddl_DifficultyLevel_Show.SelectedValue.ToString();
+            }
+
+            Repeater1.DataSource = c1.SelectDs(str);
+            Repeater1.DataBind();
+        }
+
+    }
+
+
+
+
+
+
+    protected void ddl_CategoryShow_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        FillQuestion();
+    }
+
+    protected void ddl_DifficultyLevel_Show_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        FillQuestion();
+    }
+
+
+
+}

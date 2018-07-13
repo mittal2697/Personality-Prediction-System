@@ -1,0 +1,448 @@
+
+--Table prashant.tbl_AboutUs
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_AboutUs] (
+	[AboutUs] [nvarchar](MAX) NULL);
+GO
+
+--Table prashant.tbl_AdminLogin
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_AdminLogin] (
+	[AdminId] [int] NOT NULL IDENTITY (1, 1),
+	[LoginId] [nvarchar](50) NULL,
+	[Password] [nvarchar](50) NULL,
+	[EnableStatus] [int] NULL);
+GO
+
+--Table prashant.tbl_Board
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_Board] (
+	[Board_Id] [int] NOT NULL IDENTITY (1, 1),
+	[Board_Name] [nvarchar](50) NULL);
+GO
+
+--Table prashant.tbl_Category
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_Category] (
+	[CategoryId] [int] NOT NULL IDENTITY (1, 1),
+	[CategoryName] [nvarchar](200) NULL,
+	[EnableStatus] [int] NULL,
+	[SubjectId] [int] NULL,
+	[AdminID] [int] NULL);
+GO
+
+--Table prashant.tbl_City
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_City] (
+	[City_Id] [int] NOT NULL IDENTITY (1, 1),
+	[City_Name] [nvarchar](50) NULL,
+	[State_Id] [int] NULL);
+GO
+
+--Table prashant.tbl_CompanyInfo
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_CompanyInfo] (
+	[CName] [nvarchar](4000) NULL,
+	[CAddress] [nvarchar](4000) NULL,
+	[CPhone] [nvarchar](4000) NULL,
+	[CEmail] [nvarchar](4000) NULL,
+	[Test] [nvarchar](4000) NULL,
+	[Negative] [float] NULL,
+	[DeshBoard] [nvarchar](4000) NULL,
+	[Banner1] [nvarchar](4000) NULL,
+	[Subject] [nvarchar](4000) NULL,
+	[AboutUs] [nvarchar](4000) NULL,
+	[ContactUS] [nvarchar](4000) NULL,
+	[Prices] [nvarchar](4000) NULL,
+	[Login] [nvarchar](4000) NULL,
+	[Paper] [nvarchar](4000) NULL,
+	[Result] [nvarchar](4000) NULL,
+	[ResultDetail] [nvarchar](4000) NULL,
+	[Banner2] [nvarchar](4000) NULL,
+	[Banner3] [nvarchar](4000) NULL,
+	[Banner4] [nvarchar](4000) NULL);
+GO
+
+--Table prashant.tbl_ContactUs
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_ContactUs] (
+	[Id1] [int] NOT NULL IDENTITY (1, 1),
+	[CName] [nvarchar](500) NULL,
+	[EmailId] [nvarchar](500) NULL,
+	[Message] [nvarchar](500) NULL,
+	[Subject] [nvarchar](500) NULL,
+	[PhoneNo] [nvarchar](500) NULL);
+GO
+
+--Table prashant.tbl_FunctionalArea
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_FunctionalArea] (
+	[FunctionalAreaId] [int] NOT NULL IDENTITY (1, 1),
+	[FunctionalAreaName] [nvarchar](50) NULL,
+	[IndustryId] [int] NULL);
+GO
+
+--Table prashant.tbl_Industry
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_Industry] (
+	[IndustryId] [int] NOT NULL IDENTITY (1, 1),
+	[IndustryName] [nvarchar](50) NULL);
+GO
+
+--Table prashant.tbl_JobPost
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_JobPost] (
+	[JobId] [int] NOT NULL IDENTITY (1, 1),
+	[Title] [nvarchar](50) NULL,
+	[Skills] [nvarchar](50) NULL,
+	[Salary] [nvarchar](50) NULL,
+	[Qualification] [nvarchar](50) NULL,
+	[Experience] [nvarchar](50) NULL,
+	[Description] [nvarchar](50) NULL,
+	[PostDate] [date] NULL,
+	[LastDate] [date] NULL,
+	[AdminId] [int] NULL,
+	[EnableStatus] [int] NULL CONSTRAINT [DF_tbl_JobPost_EnableStatus] DEFAULT ((1)));
+GO
+
+--Table prashant.tbl_Member
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_Member] (
+	[MemberId] [int] NOT NULL IDENTITY (1, 1),
+	[EmailId] [nvarchar](50) NOT NULL,
+	[Password] [nvarchar](50) NOT NULL,
+	[ContactNo] [nvarchar](50) NOT NULL,
+	[MemberName] [nvarchar](50) NOT NULL,
+	[Gender] [nvarchar](50) NULL,
+	[DOB] [nvarchar](50) NULL,
+	[Candidate_Address] [nvarchar](50) NULL,
+	[State_Id] [nvarchar](50) NULL,
+	[City_Id] [nvarchar](50) NULL,
+	[Pin_Code] [nvarchar](50) NULL,
+	[Experience_Type] [nvarchar](50) NULL,
+	[Experience_Year] [nvarchar](50) NULL,
+	[Experience_Month] [nvarchar](50) NULL,
+	[Key_Skills] [nvarchar](50) NULL,
+	[Job_Title] [nvarchar](50) NULL,
+	[Company_Name] [nvarchar](50) NULL,
+	[Company_Industry] [nvarchar](50) NULL,
+	[Job_Functional_Area] [nvarchar](50) NULL,
+	[Job_Duration_Year] [nvarchar](50) NULL,
+	[Job_Duration_Month] [nvarchar](50) NULL,
+	[Current_Salary] [nvarchar](50) NULL,
+	[Sec_Board] [nvarchar](50) NULL,
+	[Sec_Per] [nvarchar](50) NULL,
+	[Sec_Year] [nvarchar](50) NULL,
+	[Sec_Type] [nvarchar](50) NULL,
+	[SrSec_Board] [nvarchar](50) NULL,
+	[SrSec_Subject] [nvarchar](50) NULL,
+	[SrSec_Per] [nvarchar](50) NULL,
+	[SrSec_Year] [nvarchar](50) NULL,
+	[SrSec_Type] [nvarchar](50) NULL,
+	[Graduation_Univ] [nvarchar](50) NULL,
+	[Graduation_Degree] [nvarchar](50) NULL,
+	[Graduation_Subject] [nvarchar](50) NULL,
+	[Graduation_Per] [nvarchar](50) NULL,
+	[Graduation_Year] [nvarchar](50) NULL,
+	[Graduation_Type] [nvarchar](50) NULL,
+	[PG_Univ] [nvarchar](50) NULL,
+	[PG_Degree] [nvarchar](50) NULL,
+	[PG_Subject] [nvarchar](50) NULL,
+	[PG_Per] [nvarchar](50) NULL,
+	[PG_Year] [nvarchar](50) NULL,
+	[PG_Type] [nvarchar](50) NULL,
+	[Other_Univ] [nvarchar](50) NULL,
+	[Other_Degree] [nvarchar](50) NULL,
+	[Other_Subject] [nvarchar](50) NULL,
+	[Other_Per] [nvarchar](50) NULL,
+	[Other_Year] [nvarchar](50) NULL,
+	[Other_Type] [nvarchar](50) NULL,
+	[Resume_Url] [nvarchar](50) NULL,
+	[PhotoUrl] [nvarchar](50) NULL,
+	[Desired_State] [nvarchar](50) NULL,
+	[Desired_City] [nvarchar](50) NULL,
+	[EnableStatus] [nvarchar](50) NULL,
+	[RegDate] [date] NULL,
+	[OldSallery] [nvarchar](50) NULL,
+	[Reson] [nvarchar](500) NULL,
+	[ShortListed] [int] NULL CONSTRAINT [DF_tbl_Member_ShortListed] DEFAULT ((0)),
+	[ResumeContent] [nvarchar](MAX) NULL);
+GO
+
+--Table prashant.tbl_MemberSkills
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_MemberSkills] (
+	[MSkillId] [int] NOT NULL IDENTITY (1, 1),
+	[MemberId] [int] NULL,
+	[SkillId] [int] NULL);
+GO
+
+--Table prashant.tbl_MobileCode
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_MobileCode] (
+	[Id1] [int] NOT NULL IDENTITY (1000, 3),
+	[MobileNo] [nvarchar](100) NULL);
+GO
+
+--Table prashant.tbl_Notification
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_Notification] (
+	[Id1] [int] NOT NULL IDENTITY (1, 1),
+	[Notification] [nvarchar](MAX) NULL,
+	[Url] [nvarchar](MAX) NULL,
+	[NDate] [nvarchar](50) NULL,
+	[EnableStatus] [int] NULL,
+	[AdminId] [int] NULL);
+GO
+
+--Table prashant.tbl_Paper
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_Paper] (
+	[PaperId] [int] NOT NULL IDENTITY (1, 1),
+	[PaperName] [nvarchar](50) NULL,
+	[Description] [nvarchar](2000) NULL,
+	[Questions] [int] NULL,
+	[MinTime] [int] NULL,
+	[TestTypeId] [int] NULL,
+	[SubjectId] [int] NULL,
+	[QuestionMarks] [float] NULL,
+	[NegativeMarks] [float] NULL,
+	[EnableStatus] [int] NULL CONSTRAINT [DF__tbl_Paper__Enabl__286302EC] DEFAULT ((1)),
+	[AdminId] [int] NULL,
+	[FixPaper] [int] NULL,
+	[InstructionId] [int] NULL);
+GO
+
+--Table prashant.tbl_PaperQuestionCategory
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_PaperQuestionCategory] (
+	[PaperId] [int] NULL,
+	[CategoryId] [int] NULL,
+	[EasyQuestion] [int] NULL,
+	[ModQuestion] [int] NULL,
+	[DifQuestion] [int] NULL,
+	[PQCID] [int] NOT NULL IDENTITY (1, 1));
+GO
+
+--Table prashant.tbl_PaperSet
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_PaperSet] (
+	[PaperQuestion_Id] [int] NOT NULL IDENTITY (1, 1),
+	[PaperId] [int] NULL,
+	[QuestionId] [int] NULL);
+GO
+
+--Table prashant.tbl_Privacy
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_Privacy] (
+	[Privacy] [nvarchar](MAX) NULL);
+GO
+
+--Table prashant.tbl_Question
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_Question] (
+	[QuestionId] [int] NOT NULL IDENTITY (1, 1),
+	[Question_Title] [int] NULL,
+	[Answer] [int] NULL,
+	[SubjectId] [int] NULL,
+	[Question_Url] [nvarchar](500) NULL,
+	[Question_Type] [nvarchar](50) NULL,
+	[Question_Text] [nvarchar](MAX) NULL,
+	[QuestionCategoryId] [int] NULL,
+	[DifficultyLevel] [int] NULL,
+	[Explanation_Text] [nvarchar](MAX) NULL,
+	[Explanation_Type] [nvarchar](500) NULL,
+	[Explanation_Url] [nvarchar](500) NULL);
+GO
+
+--Table prashant.tbl_Result
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_Result] (
+	[ResultId] [int] NOT NULL IDENTITY (1, 1),
+	[PaperId] [int] NULL,
+	[EmailId] [nvarchar](50) NULL,
+	[ExamDate] [nvarchar](50) NULL,
+	[Marks] [float] NULL,
+	[NotAttempt] [int] NULL,
+	[Correct] [int] NULL,
+	[Wrong] [int] NULL,
+	[Per] [float] NULL,
+	[Percentile] [float] NULL);
+GO
+
+--Table prashant.tbl_ResultDetails
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_ResultDetails] (
+	[PaperDetailId] [int] NOT NULL IDENTITY (1, 1),
+	[ResultId] [int] NULL,
+	[QuestionId] [int] NULL,
+	[Answer] [nvarchar](50) NULL,
+	[Status] [int] NULL);
+GO
+
+--Table prashant.tbl_Skills
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_Skills] (
+	[SkillId] [int] NOT NULL IDENTITY (1, 1),
+	[SkillName] [nvarchar](200) NULL,
+	[SkillWeight] [float] NULL,
+	[EnableStatus] [int] NULL CONSTRAINT [DF__tbl_Skill__Enabl__35BCFE0A] DEFAULT ((1)),
+	[AdminId] [int] NULL);
+GO
+
+--Table prashant.tbl_State
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_State] (
+	[State_Id] [int] NOT NULL IDENTITY (1, 1),
+	[State_Name] [nvarchar](50) NULL);
+GO
+
+--Table prashant.tbl_Stream
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_Stream] (
+	[StreamId] [int] NOT NULL IDENTITY (1, 1),
+	[StreamName] [nvarchar](500) NULL,
+	[PhotoUrl] [nvarchar](500) NULL,
+	[Description] [nvarchar](180) NULL,
+	[EnableStatus] [int] NULL CONSTRAINT [DF__tbl_Strea__Enabl__2A4B4B5E] DEFAULT ((1)),
+	[AdminId] [int] NULL);
+GO
+
+--Table prashant.tbl_Subject
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_Subject] (
+	[SubjectId] [int] NOT NULL IDENTITY (1, 1),
+	[SubjectName] [nvarchar](50) NULL,
+	[StreamId] [int] NULL,
+	[PhotoUrl] [nvarchar](500) NULL,
+	[CSS] [nvarchar](500) NULL,
+	[EnableStatus] [int] NULL CONSTRAINT [DF__tbl_Subje__Enabl__29572725] DEFAULT ((1)),
+	[AdminId] [int] NULL,
+	[Description] [nvarchar](MAX) NULL);
+GO
+
+--Table prashant.tbl_TestInstruction
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_TestInstruction] (
+	[Id1] [int] NOT NULL IDENTITY (1, 1),
+	[TestInstruction] [nvarchar](MAX) NULL,
+	[InstructionType] [nvarchar](50) NULL,
+	[PhotoUrl] [nvarchar](500) NULL,
+	[Title] [nvarchar](50) NULL,
+	[AdminId] [int] NULL);
+GO
+
+--Table prashant.tbl_Uni
+
+USE [db_prashant]
+GO
+
+--Create table and its columns
+CREATE TABLE [prashant].[tbl_Uni] (
+	[Uni_Id] [int] NOT NULL IDENTITY (1, 1),
+	[Uni_Name] [nvarchar](50) NULL);
+GO

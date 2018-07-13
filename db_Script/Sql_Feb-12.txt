@@ -1,0 +1,1258 @@
+
+--Table dbo.tbl_AboutUs
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_AboutUs] (
+	[AboutUs] [nvarchar](MAX) NULL);
+GO
+
+INSERT INTO [dbo].[tbl_AboutUs] ([AboutUs])
+	VALUES (N'<p align="center" style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;"><strong style="text-decoration: none;"><em style="text-decoration: none;">â€œBe Acknowledged Globally for Value based Education &amp; Innovation in Service of Humankindâ€</em></strong></p>
+<p style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;">The Anand International College of Engineering (Anand-ICE), approved by AICTEand affiliated to RTU, Kota is established at Indiaâ€™s Pink City-Jaipur in year 2010.Since its inception, the institute persists its credentials of joyous teaching-learning environs of global standards and offers B.Tech. degree programme in five engineering disciplines i.e. Civil, Computer Science, Electrical, Electronics &amp; Communication, and Mechanical Engineering. The institute nurtures intellectually inspiring Academic Environment at lush-green landscaped campus with state-of-the-art infrastructure.</p>
+<p style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;">The Anand-ICE has been distinguished for its qualitative teaching-learning processes that place it among the best emerging engineering institutions of India (Times of India). The Anand family comprises eminent academicians &amp; scientists as faculty who also extend Academic parenting to the students. The family further broadens its intellectual arena by bringing internationally renowned professionals on board for achieving higher mark of academic intelligence.</p>
+<p style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;">The institute with AnandEdge, empowers students to redesign their curriculum through unique FSBT4 while facilitating students to not only deeply understand the fundamentals of engineering sciences but also train to obtain sustainable solutions of real-life problems. &nbsp;&nbsp;</p>
+<p style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;">The institute extends strategic partnerships with various renowned foreign universities for exposing students through Abroad Training Programme. The institute also encourages the students to incubate their innovative concepts in order to foster new ventures.&nbsp;</p>
+<p style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;">The campus enriches students with diverse range of competencies through 390<sup style="text-decoration: none;">o</sup>&nbsp;evolving processes and gears them up to respond to the challenges of every aspect of life and compete globally.</p>
+<p style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;">The success of our students in the wider world itself speaks for them. Join us and be part of stream of success!</p>')
+
+GO
+
+--Table dbo.tbl_AdminLogin
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_AdminLogin] (
+	[AdminId] [int] NOT NULL IDENTITY (1, 1),
+	[LoginId] [nvarchar](50) NULL,
+	[Password] [nvarchar](50) NULL,
+	[EnableStatus] [int] NULL);
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_AdminLogin] ON
+GO
+INSERT INTO [dbo].[tbl_AdminLogin] ([AdminId], [LoginId], [Password], [EnableStatus])
+	VALUES (1, N'SuperAdmin', N'a', 1)
+
+GO
+INSERT INTO [dbo].[tbl_AdminLogin] ([AdminId], [LoginId], [Password], [EnableStatus])
+	VALUES (2, N'mukesh', N'a', 0)
+
+GO
+INSERT INTO [dbo].[tbl_AdminLogin] ([AdminId], [LoginId], [Password], [EnableStatus])
+	VALUES (4, N'Anand', N'a', NULL)
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_AdminLogin] OFF
+GO
+
+--Table dbo.tbl_Board
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_Board] (
+	[Board_Id] [int] NOT NULL IDENTITY (1, 1),
+	[Board_Name] [nvarchar](50) NULL);
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_Board] ON
+GO
+INSERT INTO [dbo].[tbl_Board] ([Board_Id], [Board_Name])
+	VALUES (1, N'abcd')
+
+GO
+INSERT INTO [dbo].[tbl_Board] ([Board_Id], [Board_Name])
+	VALUES (2, N'rbsc')
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Board] OFF
+GO
+
+--Table dbo.tbl_Category
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_Category] (
+	[CategoryId] [int] NOT NULL IDENTITY (1, 1),
+	[CategoryName] [nvarchar](200) NULL,
+	[EnableStatus] [int] NULL,
+	[SubjectId] [int] NULL,
+	[AdminID] [int] NULL);
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_Category] ON
+GO
+INSERT INTO [dbo].[tbl_Category] ([CategoryId], [CategoryName], [EnableStatus], [SubjectId], [AdminID])
+	VALUES (1, N'category sub2cat1', 1, 2, 1)
+
+GO
+INSERT INTO [dbo].[tbl_Category] ([CategoryId], [CategoryName], [EnableStatus], [SubjectId], [AdminID])
+	VALUES (2, N'category sub2cat2', 1, 2, 1)
+
+GO
+INSERT INTO [dbo].[tbl_Category] ([CategoryId], [CategoryName], [EnableStatus], [SubjectId], [AdminID])
+	VALUES (3, N'My1', 1, 3, 1)
+
+GO
+INSERT INTO [dbo].[tbl_Category] ([CategoryId], [CategoryName], [EnableStatus], [SubjectId], [AdminID])
+	VALUES (4, N'My2', 1, 3, 1)
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Category] OFF
+GO
+
+--Table dbo.tbl_City
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_City] (
+	[City_Id] [int] NOT NULL IDENTITY (1, 1),
+	[City_Name] [nvarchar](50) NULL,
+	[State_Id] [int] NULL);
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_City] ON
+GO
+INSERT INTO [dbo].[tbl_City] ([City_Id], [City_Name], [State_Id])
+	VALUES (1, N'Jaipur', 1)
+
+GO
+INSERT INTO [dbo].[tbl_City] ([City_Id], [City_Name], [State_Id])
+	VALUES (2, N'Ajmer', 1)
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_City] OFF
+GO
+
+--Table dbo.tbl_CompanyInfo
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_CompanyInfo] (
+	[CName] [nvarchar](4000) NULL,
+	[CAddress] [nvarchar](4000) NULL,
+	[CPhone] [nvarchar](4000) NULL,
+	[CEmail] [nvarchar](4000) NULL,
+	[Test] [nvarchar](4000) NULL,
+	[Negative] [float] NULL,
+	[DeshBoard] [nvarchar](4000) NULL,
+	[Banner1] [nvarchar](4000) NULL,
+	[Subject] [nvarchar](4000) NULL,
+	[AboutUs] [nvarchar](4000) NULL,
+	[ContactUS] [nvarchar](4000) NULL,
+	[Prices] [nvarchar](4000) NULL,
+	[Login] [nvarchar](4000) NULL,
+	[Paper] [nvarchar](4000) NULL,
+	[Result] [nvarchar](4000) NULL,
+	[ResultDetail] [nvarchar](4000) NULL,
+	[Banner2] [nvarchar](4000) NULL,
+	[Banner3] [nvarchar](4000) NULL,
+	[Banner4] [nvarchar](4000) NULL);
+GO
+
+INSERT INTO [dbo].[tbl_CompanyInfo] ([CName], [CAddress], [CPhone], [CEmail], [Test], [Negative], [DeshBoard], [Banner1], [Subject], [AboutUs], [ContactUS], [Prices], [Login], [Paper], [Result], [ResultDetail], [Banner2], [Banner3], [Banner4])
+	VALUES (N'Shri Ram', N'Anand International College of Engineering Near Kanota, Agra Road, Jaipur.', N'Phone: 01429- 234994, 95 <br />
+Mobile: 9928755552, 9928755553 <br />
+Fax: 01429- 234994', N'Email: info@anandice.ac.in', N'Retake', CAST ('0.25' AS float), N'DeshBoard/DeshBoard.jpg', N'DeshBoard/Banner1.jpg', N'DeshBoard/Subject.jpg', N'DeshBoard/AboutUS.jpg', N'DeshBoard/ContactUs.jpg', N'DeshBoard/Prices.jpg', N'DeshBoard/Login.jpg', N'DeshBoard/Paper.jpg', N'DeshBoard/Result.jpg', N'DeshBoard/ResultDetail.jpg', N'DeshBoard/Banner2.jpg', N'DeshBoard/Banner3.jpg', N'DeshBoard/Banner4.jpg')
+
+GO
+
+--Table dbo.tbl_ContactUs
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_ContactUs] (
+	[CId] [int] NOT NULL IDENTITY (1, 1),
+	[CName] [nvarchar](500) NULL,
+	[EmailId] [nvarchar](500) NULL,
+	[Message] [nvarchar](500) NULL,
+	[Subject] [nvarchar](500) NULL,
+	[PhoneNo] [nvarchar](500) NULL);
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_ContactUs] ON
+GO
+INSERT INTO [dbo].[tbl_ContactUs] ([CId], [CName], [EmailId], [Message], [Subject], [PhoneNo])
+	VALUES (3, N'Pradeep Kumar', N'Pk@gmail.com', N'askhfaflashflaskdf', N'Subject', N'7734948665')
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_ContactUs] OFF
+GO
+
+--Table dbo.tbl_FunctionalArea
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_FunctionalArea] (
+	[FunctionalAreaId] [int] NOT NULL IDENTITY (1, 1),
+	[FunctionalAreaName] [nvarchar](50) NULL,
+	[IndustryId] [int] NULL);
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_FunctionalArea] ON
+GO
+INSERT INTO [dbo].[tbl_FunctionalArea] ([FunctionalAreaId], [FunctionalAreaName], [IndustryId])
+	VALUES (1, N'Jaipur', 1)
+
+GO
+INSERT INTO [dbo].[tbl_FunctionalArea] ([FunctionalAreaId], [FunctionalAreaName], [IndustryId])
+	VALUES (2, N'Jaipur Kishaan Marg ', 1)
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_FunctionalArea] OFF
+GO
+
+--Table dbo.tbl_Industry
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_Industry] (
+	[IndustryId] [int] NOT NULL IDENTITY (1, 1),
+	[IndustryName] [nvarchar](50) NULL);
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_Industry] ON
+GO
+INSERT INTO [dbo].[tbl_Industry] ([IndustryId], [IndustryName])
+	VALUES (1, N'Computer Hardware')
+
+GO
+INSERT INTO [dbo].[tbl_Industry] ([IndustryId], [IndustryName])
+	VALUES (2, N'Developer')
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Industry] OFF
+GO
+
+--Table dbo.tbl_JobPost
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_JobPost] (
+	[JobId] [int] NOT NULL IDENTITY (1, 1),
+	[Title] [nvarchar](50) NULL,
+	[Skills] [nvarchar](50) NULL,
+	[Salary] [nvarchar](50) NULL,
+	[Qualification] [nvarchar](50) NULL,
+	[Experience] [nvarchar](50) NULL,
+	[Description] [nvarchar](50) NULL,
+	[PostDate] [date] NULL,
+	[LastDate] [date] NULL,
+	[AdminId] [int] NULL,
+	[EnableStatus] [int] NULL CONSTRAINT [DF_tbl_JobPost_EnableStatus] DEFAULT ((1)));
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_JobPost] ON
+GO
+INSERT INTO [dbo].[tbl_JobPost] ([JobId], [Title], [Skills], [Salary], [Qualification], [Experience], [Description], [PostDate], [LastDate], [AdminId], [EnableStatus])
+	VALUES (1, N'abc', N'abc', N'abc', N'vabc', N'abc', N'abc', CAST(0x6f390b AS date), CAST(0x6f390b AS date), 1, 1)
+
+GO
+INSERT INTO [dbo].[tbl_JobPost] ([JobId], [Title], [Skills], [Salary], [Qualification], [Experience], [Description], [PostDate], [LastDate], [AdminId], [EnableStatus])
+	VALUES (3, N'pradep', N'sunshine', N'10000', N'sunshine', N'sunshine', N'Bachelor of Technology (Btech)', CAST(0x6f390b AS date), CAST(0xbd3a0b AS date), 1, 1)
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_JobPost] OFF
+GO
+
+--Table dbo.tbl_Member
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_Member] (
+	[MemberId] [int] NOT NULL IDENTITY (1, 1),
+	[EmailId] [nvarchar](50) NOT NULL,
+	[Password] [nvarchar](50) NOT NULL,
+	[ContactNo] [nvarchar](50) NOT NULL,
+	[MemberName] [nvarchar](50) NOT NULL,
+	[Gender] [nvarchar](50) NULL,
+	[DOB] [nvarchar](50) NULL,
+	[Candidate_Address] [nvarchar](50) NULL,
+	[State_Id] [nvarchar](50) NULL,
+	[City_Id] [nvarchar](50) NULL,
+	[Pin_Code] [nvarchar](50) NULL,
+	[Experience_Type] [nvarchar](50) NULL,
+	[Experience_Year] [nvarchar](50) NULL,
+	[Experience_Month] [nvarchar](50) NULL,
+	[Key_Skills] [nvarchar](50) NULL,
+	[Job_Title] [nvarchar](50) NULL,
+	[Company_Name] [nvarchar](50) NULL,
+	[Company_Industry] [nvarchar](50) NULL,
+	[Job_Functional_Area] [nvarchar](50) NULL,
+	[Job_Duration_Year] [nvarchar](50) NULL,
+	[Job_Duration_Month] [nvarchar](50) NULL,
+	[Current_Salary] [nvarchar](50) NULL,
+	[Sec_Board] [nvarchar](50) NULL,
+	[Sec_Per] [nvarchar](50) NULL,
+	[Sec_Year] [nvarchar](50) NULL,
+	[Sec_Type] [nvarchar](50) NULL,
+	[SrSec_Board] [nvarchar](50) NULL,
+	[SrSec_Subject] [nvarchar](50) NULL,
+	[SrSec_Per] [nvarchar](50) NULL,
+	[SrSec_Year] [nvarchar](50) NULL,
+	[SrSec_Type] [nvarchar](50) NULL,
+	[Graduation_Univ] [nvarchar](50) NULL,
+	[Graduation_Degree] [nvarchar](50) NULL,
+	[Graduation_Subject] [nvarchar](50) NULL,
+	[Graduation_Per] [nvarchar](50) NULL,
+	[Graduation_Year] [nvarchar](50) NULL,
+	[Graduation_Type] [nvarchar](50) NULL,
+	[PG_Univ] [nvarchar](50) NULL,
+	[PG_Degree] [nvarchar](50) NULL,
+	[PG_Subject] [nvarchar](50) NULL,
+	[PG_Per] [nvarchar](50) NULL,
+	[PG_Year] [nvarchar](50) NULL,
+	[PG_Type] [nvarchar](50) NULL,
+	[Other_Univ] [nvarchar](50) NULL,
+	[Other_Degree] [nvarchar](50) NULL,
+	[Other_Subject] [nvarchar](50) NULL,
+	[Other_Per] [nvarchar](50) NULL,
+	[Other_Year] [nvarchar](50) NULL,
+	[Other_Type] [nvarchar](50) NULL,
+	[Resume_Url] [nvarchar](50) NULL,
+	[PhotoUrl] [nvarchar](50) NULL,
+	[Desired_State] [nvarchar](50) NULL,
+	[Desired_City] [nvarchar](50) NULL,
+	[EnableStatus] [nvarchar](50) NULL,
+	[RegDate] [date] NULL,
+	[OldSallery] [nvarchar](50) NULL,
+	[Reson] [nvarchar](500) NULL,
+	[ShortListed] [int] NULL CONSTRAINT [DF_tbl_Member_ShortListed] DEFAULT ((0)));
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_Member] ON
+GO
+INSERT INTO [dbo].[tbl_Member] ([MemberId], [EmailId], [Password], [ContactNo], [MemberName], [Gender], [DOB], [Candidate_Address], [State_Id], [City_Id], [Pin_Code], [Experience_Type], [Experience_Year], [Experience_Month], [Key_Skills], [Job_Title], [Company_Name], [Company_Industry], [Job_Functional_Area], [Job_Duration_Year], [Job_Duration_Month], [Current_Salary], [Sec_Board], [Sec_Per], [Sec_Year], [Sec_Type], [SrSec_Board], [SrSec_Subject], [SrSec_Per], [SrSec_Year], [SrSec_Type], [Graduation_Univ], [Graduation_Degree], [Graduation_Subject], [Graduation_Per], [Graduation_Year], [Graduation_Type], [PG_Univ], [PG_Degree], [PG_Subject], [PG_Per], [PG_Year], [PG_Type], [Other_Univ], [Other_Degree], [Other_Subject], [Other_Per], [Other_Year], [Other_Type], [Resume_Url], [PhotoUrl], [Desired_State], [Desired_City], [EnableStatus], [RegDate], [OldSallery], [Reson], [ShortListed])
+	VALUES (8, N'Pk@gmail.com', N'PRADEEP', N'7734948665', N'Pradeep kumar', N'Male', N'22/02/2018', N'Chokha ka Bass PO. Kashi Ka Bass ', N'1', N'1', N'332021', N'Fresher', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'2', N'63', N'2014', N'Regular', N'2', N'Maths', N'74', N'2016', N'Regular', N'1', N'BCA', N'BCA All Subjects', N'67', N'2019', N'Regular', N'Select University', N'', N'', N'', N'', N'0', N'Select University', N'', N'', N'', N'', N'Select University', N'CandidateResumes/8.png', N'MemberPhoto/8.txt', N'1', N'2', N'1', CAST(0xdb3d0b AS date), NULL, NULL, 1)
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Member] OFF
+GO
+
+--Table dbo.tbl_MobileCode
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_MobileCode] (
+	[Id1] [int] NOT NULL IDENTITY (1000, 3),
+	[MobileNo] [nvarchar](100) NULL);
+GO
+
+--Table dbo.tbl_Notification
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_Notification] (
+	[Id1] [int] NOT NULL IDENTITY (1, 1),
+	[Notification] [nvarchar](MAX) NULL,
+	[Url] [nvarchar](MAX) NULL,
+	[NDate] [nvarchar](50) NULL,
+	[EnableStatus] [int] NULL,
+	[AdminId] [int] NULL);
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_Notification] ON
+GO
+INSERT INTO [dbo].[tbl_Notification] ([Id1], [Notification], [Url], [NDate], [EnableStatus], [AdminId])
+	VALUES (6, N'Clicke here to download Admission Information Leaflet -2017', N'http://www.anandice.ac.in/downloads', N'1.1.2018', 1, 2)
+
+GO
+INSERT INTO [dbo].[tbl_Notification] ([Id1], [Notification], [Url], [NDate], [EnableStatus], [AdminId])
+	VALUES (7, N'Know  more about Anand International  Collge of Engineering', N'http://www.anandice.ac.in/about-us', N'1.1.2018', 1, 2)
+
+GO
+INSERT INTO [dbo].[tbl_Notification] ([Id1], [Notification], [Url], [NDate], [EnableStatus], [AdminId])
+	VALUES (8, N'Admisions started on Jan 2018 onwords in all engineeri ng branched.', N'http://www.anandice.ac.in/admissions', N'1.1.2018', 1, 2)
+
+GO
+INSERT INTO [dbo].[tbl_Notification] ([Id1], [Notification], [Url], [NDate], [EnableStatus], [AdminId])
+	VALUES (9, N'Contact us for detail information about online test series', N'http://www.anandice.ac.in/contact-us', N'1.1.2018', 1, 2)
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Notification] OFF
+GO
+
+--Table dbo.tbl_Paper
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_Paper] (
+	[PaperId] [int] NOT NULL IDENTITY (1, 1),
+	[PaperName] [nvarchar](50) NULL,
+	[Description] [nvarchar](2000) NULL,
+	[Questions] [int] NULL,
+	[MinTime] [int] NULL,
+	[TestTypeId] [int] NULL,
+	[SubjectId] [int] NULL,
+	[QuestionMarks] [float] NULL,
+	[NegativeMarks] [float] NULL,
+	[EnableStatus] [int] NULL CONSTRAINT [DF__tbl_Paper__Enabl__286302EC] DEFAULT ((1)),
+	[AdminId] [int] NULL,
+	[FixPaper] [int] NULL,
+	[InstructionId] [int] NULL);
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_Paper] ON
+GO
+INSERT INTO [dbo].[tbl_Paper] ([PaperId], [PaperName], [Description], [Questions], [MinTime], [TestTypeId], [SubjectId], [QuestionMarks], [NegativeMarks], [EnableStatus], [AdminId], [FixPaper], [InstructionId])
+	VALUES (1, N'Paper one', N'paper_s2p1', 12, 30, NULL, 2, CAST ('1' AS float), CAST ('0.25' AS float), 1, 1, 1, 16)
+
+GO
+INSERT INTO [dbo].[tbl_Paper] ([PaperId], [PaperName], [Description], [Questions], [MinTime], [TestTypeId], [SubjectId], [QuestionMarks], [NegativeMarks], [EnableStatus], [AdminId], [FixPaper], [InstructionId])
+	VALUES (2, N'Paper Two', N'paper_s2p2', 12, 30, NULL, 2, CAST ('1' AS float), CAST ('0.5' AS float), 1, 1, 0, 16)
+
+GO
+INSERT INTO [dbo].[tbl_Paper] ([PaperId], [PaperName], [Description], [Questions], [MinTime], [TestTypeId], [SubjectId], [QuestionMarks], [NegativeMarks], [EnableStatus], [AdminId], [FixPaper], [InstructionId])
+	VALUES (3, N'My Paper', N'My Paper', 12, 10, NULL, 3, CAST ('2' AS float), CAST ('0.25' AS float), 0, 1, 1, 19)
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Paper] OFF
+GO
+
+--Table dbo.tbl_PaperQuestionCategory
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_PaperQuestionCategory] (
+	[PaperId] [int] NULL,
+	[CategoryId] [int] NULL,
+	[EasyQuestion] [int] NULL,
+	[ModQuestion] [int] NULL,
+	[DifQuestion] [int] NULL,
+	[PQCID] [int] NOT NULL IDENTITY (1, 1));
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_PaperQuestionCategory] ON
+GO
+INSERT INTO [dbo].[tbl_PaperQuestionCategory] ([PaperId], [CategoryId], [EasyQuestion], [ModQuestion], [DifQuestion], [PQCID])
+	VALUES (1, 1, 2, 2, 2, 1)
+
+GO
+INSERT INTO [dbo].[tbl_PaperQuestionCategory] ([PaperId], [CategoryId], [EasyQuestion], [ModQuestion], [DifQuestion], [PQCID])
+	VALUES (1, 2, 2, 2, 2, 2)
+
+GO
+INSERT INTO [dbo].[tbl_PaperQuestionCategory] ([PaperId], [CategoryId], [EasyQuestion], [ModQuestion], [DifQuestion], [PQCID])
+	VALUES (2, 1, 2, 2, 2, 3)
+
+GO
+INSERT INTO [dbo].[tbl_PaperQuestionCategory] ([PaperId], [CategoryId], [EasyQuestion], [ModQuestion], [DifQuestion], [PQCID])
+	VALUES (2, 2, 2, 2, 2, 4)
+
+GO
+INSERT INTO [dbo].[tbl_PaperQuestionCategory] ([PaperId], [CategoryId], [EasyQuestion], [ModQuestion], [DifQuestion], [PQCID])
+	VALUES (3, 3, 2, 2, 2, 5)
+
+GO
+INSERT INTO [dbo].[tbl_PaperQuestionCategory] ([PaperId], [CategoryId], [EasyQuestion], [ModQuestion], [DifQuestion], [PQCID])
+	VALUES (3, 4, 2, 2, 2, 6)
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_PaperQuestionCategory] OFF
+GO
+
+--Table dbo.tbl_PaperSet
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_PaperSet] (
+	[PaperQuestion_Id] [int] NOT NULL IDENTITY (1, 1),
+	[PaperId] [int] NULL,
+	[QuestionId] [int] NULL);
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_PaperSet] ON
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (1, 1, 1)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (2, 1, 4)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (3, 1, 10)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (4, 1, 9)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (5, 1, 15)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (6, 1, 14)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (7, 1, 20)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (8, 1, 19)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (9, 1, 25)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (10, 1, 24)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (11, 1, 30)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (12, 1, 29)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (13, 3, 36)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (14, 3, 33)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (15, 3, 40)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (16, 3, 38)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (17, 3, 45)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (18, 3, 42)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (19, 3, 66)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (20, 3, 49)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (21, 3, 61)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (22, 3, 56)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (23, 3, 65)
+
+GO
+INSERT INTO [dbo].[tbl_PaperSet] ([PaperQuestion_Id], [PaperId], [QuestionId])
+	VALUES (24, 3, 63)
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_PaperSet] OFF
+GO
+
+--Table dbo.tbl_Privacy
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_Privacy] (
+	[Privacy] [nvarchar](MAX) NULL);
+GO
+
+INSERT INTO [dbo].[tbl_Privacy] ([Privacy])
+	VALUES (N'<p style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;"><strong style="text-decoration: none;">Anand International College of Engineering is committed to protecting your privacy.</strong></p>
+<p style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;">Any information you voluntarily provide to us through Anand International College of Engineering website, such as an email address, name, or phone number, will never be sold or traded to other colleges, universities, non-profit organizations, or businesses.</p>
+<p style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;"><strong style="text-decoration: none;">Cookies</strong></p>
+<p style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;">Cookies are small files that are stored on your computer (unless you block them). We use cookies to understand and save your preferences for future visits and compile aggregate data about site traffic and site interaction so that we can offer better site experiences and tools in the future. We may contract with third-party service providers to assist us in better understanding our site visitors.</p>
+<p style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;"><strong style="text-decoration: none;">Links to Third-Party Websites</strong></p>
+<p style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;">We may provide hyperlinks to third-party websites as a convenience to users of Anand International College of Engineering. Anand International College of Engineering does not control third-party websites and is not responsible for the contents of any linked-to, third-party websites or any hyperlink in a linked-to website. We are not responsible for the privacy practices or the content of third-party websites.</p>
+<p style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;"><strong style="text-decoration: none;">Personal Information</strong></p>
+<p style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;">Anand International College of Engineering does not collect any personal information unless you choose to provide such information by way of email or online means including surveys, admission applications, and inquiry forms. Personal information will be used only for purposes to serve your needs. When responding to your inquiry or request for information it may be necessary to redirect your request or comment to another staff member or department better suited to meeting your needs. Personal information obtained via the web shall not be sold to third parties.</p>
+<p style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;"><strong style="text-decoration: none;">Site Policies, Modification and Severability</strong></p>
+<p style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;">We reserve the right to make changes to our site, policies, and these Conditions of Use at any time. If any of these conditions shall be deemed invalid, void, or for any reason unenforceable, that condition shall be deemed severable and shall not affect the validity and enforceability of any remaining condition. All other trademarks and logos / Brand Names used in our websites and our social media Pages belong to their respective owners.</p>
+<p style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;"><strong style="text-decoration: none;">Questions:</strong></p>
+<p style="text-decoration: none; font-size: 13px; padding: 0px 0px 15px; margin: 0px; text-align: justify; line-height: 22px; color: #454545; font-family: arial, helvetica, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff;">Questions regarding our Conditions of Usage, Privacy Policy, or other policy related material can be directed to our support staff by clicking on the &quot;Contact Us&quot; link. Or you can email us at: info@anandice.ac.in</p>')
+
+GO
+
+--Table dbo.tbl_Question
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_Question] (
+	[QuestionId] [int] NOT NULL IDENTITY (1, 1),
+	[Question_Title] [int] NULL,
+	[Answer] [int] NULL,
+	[SubjectId] [int] NULL,
+	[Question_Url] [nvarchar](500) NULL,
+	[Question_Type] [nvarchar](50) NULL,
+	[Question_Text] [nvarchar](MAX) NULL,
+	[QuestionCategoryId] [int] NULL,
+	[DifficultyLevel] [int] NULL,
+	[Explanation_Text] [nvarchar](MAX) NULL,
+	[Explanation_Type] [nvarchar](500) NULL,
+	[Explanation_Url] [nvarchar](500) NULL);
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_Question] ON
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (1, 101, 2, 2, N'Questions/1.png', N'Image', N'', 1, 1, N'', N'Image', N'QuestionExplain/1.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (2, 102, 2, 2, N'Questions/2.png', N'Image', N'', 1, 1, N'', N'Image', N'QuestionExplain/2.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (3, 103, 3, 2, N'Questions/3.png', N'Image', N'', 1, 1, N'', N'Image', N'QuestionExplain/3.jpg')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (4, 104, 4, 2, N'Questions/4.jpg', N'Image', N'', 1, 1, N'', N'Image', N'QuestionExplain/4.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (5, 105, 2, 2, N'Questions/5.png', N'Image', N'', 1, 1, N'', N'Image', N'QuestionExplain/5.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (6, 106, 2, 2, N'Questions/6.png', N'Image', N'', 1, 2, N'', N'Image', N'QuestionExplain/6.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (7, 107, 2, 2, N'Questions/7.png', N'Image', N'', 1, 2, N'', N'Image', N'QuestionExplain/7.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (8, 108, 2, 2, N'Questions/8.png', N'Image', N'', 1, 2, N'', N'Image', N'QuestionExplain/8.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (9, 109, 2, 2, N'Questions/9.png', N'Image', N'', 1, 2, N'', N'Image', N'QuestionExplain/9.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (10, 110, 2, 2, N'Questions/10.png', N'Image', N'', 1, 2, N'', N'Image', N'QuestionExplain/10.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (11, 111, 2, 2, N'Questions/11.png', N'Image', N'', 1, 3, N'', N'Image', N'QuestionExplain/11.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (12, 112, 2, 2, N'Questions/12.png', N'Image', N'', 1, 3, N'', N'Image', N'QuestionExplain/12.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (13, 113, 2, 2, N'Questions/13.png', N'Image', N'', 1, 3, N'', N'Image', N'QuestionExplain/13.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (14, 114, 2, 2, N'Questions/14.png', N'Image', N'', 1, 3, N'', N'Image', N'QuestionExplain/14.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (15, 115, 2, 2, N'Questions/15.png', N'Image', N'', 1, 3, N'', N'Image', N'QuestionExplain/15.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (16, 201, 2, 2, N'Questions/16.png', N'Image', N'', 2, 1, N'', N'Image', N'QuestionExplain/16.jpg')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (17, 202, 2, 2, N'Questions/17.png', N'Image', N'', 2, 1, N'', N'Image', N'QuestionExplain/17.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (18, 203, 2, 2, N'Questions/18.png', N'Image', N'', 2, 1, N'', N'Image', N'QuestionExplain/18.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (19, 204, 2, 2, N'Questions/19.png', N'Image', N'', 2, 1, N'', N'Image', N'QuestionExplain/19.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (20, 205, 2, 2, N'Questions/20.png', N'Image', N'', 2, 1, N'', N'Image', N'QuestionExplain/20.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (21, 206, 2, 2, N'Questions/21.png', N'Image', N'', 2, 2, N'', N'Image', N'QuestionExplain/21.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (22, 207, 2, 2, N'Questions/22.png', N'Image', N'', 2, 2, N'', N'Image', N'QuestionExplain/22.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (23, 208, 2, 2, N'Questions/23.png', N'Image', N'', 2, 2, N'', N'Image', N'QuestionExplain/23.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (24, 209, 2, 2, N'Questions/24.png', N'Image', N'', 2, 2, N'', N'Image', N'QuestionExplain/24.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (25, 210, 2, 2, N'Questions/25.png', N'Image', N'', 2, 2, N'', N'Image', N'QuestionExplain/25.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (26, 211, 2, 2, N'Questions/26.png', N'Image', N'', 2, 3, N'', N'Image', N'QuestionExplain/26.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (27, 212, 2, 2, N'Questions/27.png', N'Image', N'', 2, 3, N'', N'Image', N'QuestionExplain/27.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (28, 213, 2, 2, N'Questions/28.png', N'Image', N'', 2, 3, N'', N'Image', N'QuestionExplain/28.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (29, 214, 2, 2, N'Questions/29.png', N'Image', N'', 2, 3, N'', N'Image', N'QuestionExplain/29.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (30, 215, 2, 2, N'Questions/30.png', N'Image', N'', 2, 3, N'', N'Image', N'QuestionExplain/30.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (31, 200, 2, 2, N'Questions/31.png', N'Image', N'', 2, 1, N'', N'Image', N'QuestionExplain/31.png')
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (32, 1, 1, 3, NULL, N'Text', N'a<br />', 3, 1, N'a<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (33, 2, 1, 3, NULL, N'Text', N'b<br />', 3, 1, N'b<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (34, 3, 1, 3, NULL, N'Text', N'c<br />', 3, 1, N'c<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (35, 4, 1, 3, NULL, N'Text', N'd<br />', 3, 1, N'4<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (36, 5, 1, 3, NULL, N'Text', N'e<br />', 3, 1, N'e<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (37, 6, 1, 3, NULL, N'Text', N'f<br />', 3, 2, N'f<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (38, 7, 1, 3, NULL, N'Text', N'g<br />', 3, 2, N'g<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (39, 8, 1, 3, NULL, N'Text', N'h<br />', 3, 2, N'h<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (40, 9, 1, 3, NULL, N'Text', N'i<br />', 3, 2, N'i<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (41, 11, 1, 3, NULL, N'Text', N'k<br />', 3, 3, N'k<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (42, 12, 1, 3, NULL, N'Text', N'L<br />', 3, 3, N'L<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (43, 13, 1, 3, NULL, N'Text', N'M<br />', 3, 3, N'M<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (44, 14, 1, 3, NULL, N'Text', N'N<br />', 3, 3, N'N<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (45, 15, 1, 3, NULL, N'Text', N'O<br />', 3, 3, N'O<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (47, 16, 1, 3, NULL, N'Text', N'16<br />', 4, 1, N'P<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (48, 17, 1, 3, NULL, N'Text', N'Q<br />', 4, 1, N'Q<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (49, 18, 1, 3, NULL, N'Text', N'R<br />', 4, 1, N'R<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (50, 19, 1, 3, NULL, N'Text', N'S<br />', 4, 1, N'S<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (51, 20, 1, 3, NULL, N'Text', N'T<br />', 4, 1, N'T<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (52, 21, 1, 3, NULL, N'Text', N'U<br />', 4, 1, N'U<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (53, 22, 1, 3, NULL, N'Text', N'V<br />', 4, 2, N'V<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (54, 23, 1, 3, NULL, N'Text', N'X<br />', 4, 2, N'X<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (55, 24, 1, 3, NULL, N'Text', N'Y<br />', 4, 2, N'Y<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (56, 25, 1, 3, NULL, N'Text', N'Z<br />', 4, 2, N'Z<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (57, 26, 1, 3, NULL, N'Text', N'a1<br />', 4, 2, N'a1<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (58, 27, 1, 3, NULL, N'Text', N'a2<br />', 4, 2, N'a2<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (59, 28, 1, 3, NULL, N'Text', N'a3<br />', 4, 2, N'a3<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (60, 29, 1, 3, NULL, N'Text', N'a4<br />', 4, 2, N'a4<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (61, 30, 1, 3, NULL, N'Text', N'a6<br />', 4, 2, N'a6<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (62, 31, 1, 3, NULL, N'Text', N'a7<br />', 4, 3, N'a7<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (63, 32, 1, 3, NULL, N'Text', N'a8<br />', 4, 3, N'a8<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (64, 33, 1, 3, NULL, N'Text', N'a9<br />', 4, 3, N'a9<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (65, 35, 1, 3, NULL, N'Text', N'a10<br />', 4, 3, N'a10<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (66, 36, 1, 3, NULL, N'Text', N'a11<br />', 4, 1, N'a11<br />', N'Text', NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Question] ([QuestionId], [Question_Title], [Answer], [SubjectId], [Question_Url], [Question_Type], [Question_Text], [QuestionCategoryId], [DifficultyLevel], [Explanation_Text], [Explanation_Type], [Explanation_Url])
+	VALUES (67, 1, 1, NULL, N'', N'Text', N'my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 2 my 21', 4, NULL, N'', N'Image', N'QuestionExplain/67.jpg')
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Question] OFF
+GO
+
+--Table dbo.tbl_Result
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_Result] (
+	[ResultId] [int] NOT NULL IDENTITY (1, 1),
+	[PaperId] [int] NULL,
+	[EmailId] [nvarchar](50) NULL,
+	[ExamDate] [nvarchar](50) NULL,
+	[Marks] [float] NULL,
+	[NotAttempt] [int] NULL,
+	[Correct] [int] NULL,
+	[Wrong] [int] NULL,
+	[Per] [float] NULL,
+	[Percentile] [float] NULL);
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_Result] ON
+GO
+INSERT INTO [dbo].[tbl_Result] ([ResultId], [PaperId], [EmailId], [ExamDate], [Marks], [NotAttempt], [Correct], [Wrong], [Per], [Percentile])
+	VALUES (1, 3, N'Pk@gmail.com', N'2/11/2018', CAST ('-1.5' AS float), 4, 0, 6, CAST ('-7.5' AS float), NULL)
+
+GO
+INSERT INTO [dbo].[tbl_Result] ([ResultId], [PaperId], [EmailId], [ExamDate], [Marks], [NotAttempt], [Correct], [Wrong], [Per], [Percentile])
+	VALUES (2, NULL, N'Pk@gmail.com', N'2/11/2018', CAST ('0' AS float), 10, 0, 0, CAST ('0' AS float), NULL)
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Result] OFF
+GO
+
+--Table dbo.tbl_ResultDetails
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_ResultDetails] (
+	[PaperDetailId] [int] NOT NULL IDENTITY (1, 1),
+	[ResultId] [int] NULL,
+	[QuestionId] [int] NULL,
+	[Answer] [nvarchar](50) NULL,
+	[Status] [int] NULL);
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_ResultDetails] ON
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (1, 1, 65, N'4', 0)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (2, 1, 5, N'4', 0)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (3, 1, 12, N'4', 0)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (4, 1, 42, N'0', 9)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (5, 1, 26, N'4', 0)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (6, 1, 47, N'3', 0)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (7, 1, 56, N'0', 9)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (8, 1, 67, N'0', 9)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (9, 1, 33, N'4', 0)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (10, 1, 51, N'0', 9)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (11, 2, 66, N'0', 9)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (12, 2, 42, N'0', 9)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (13, 2, 60, N'0', 9)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (14, 2, 62, N'0', 9)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (15, 2, 53, N'0', 9)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (16, 2, 16, N'0', 9)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (17, 2, 8, N'0', 9)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (18, 2, 19, N'0', 9)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (19, 2, 23, N'0', 9)
+
+GO
+INSERT INTO [dbo].[tbl_ResultDetails] ([PaperDetailId], [ResultId], [QuestionId], [Answer], [Status])
+	VALUES (20, 2, 20, N'0', 9)
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_ResultDetails] OFF
+GO
+
+--Table dbo.tbl_State
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_State] (
+	[State_Id] [int] NOT NULL IDENTITY (1, 1),
+	[State_Name] [nvarchar](50) NULL);
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_State] ON
+GO
+INSERT INTO [dbo].[tbl_State] ([State_Id], [State_Name])
+	VALUES (1, N'Rajasthan')
+
+GO
+INSERT INTO [dbo].[tbl_State] ([State_Id], [State_Name])
+	VALUES (2, N'Haryana')
+
+GO
+INSERT INTO [dbo].[tbl_State] ([State_Id], [State_Name])
+	VALUES (3, N'Panjab')
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_State] OFF
+GO
+
+--Table dbo.tbl_Stream
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_Stream] (
+	[StreamId] [int] NOT NULL IDENTITY (1, 1),
+	[StreamName] [nvarchar](500) NULL,
+	[PhotoUrl] [nvarchar](500) NULL,
+	[Description] [nvarchar](180) NULL,
+	[EnableStatus] [int] NULL CONSTRAINT [DF__tbl_Strea__Enabl__2A4B4B5E] DEFAULT ((1)),
+	[AdminId] [int] NULL);
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_Stream] ON
+GO
+INSERT INTO [dbo].[tbl_Stream] ([StreamId], [StreamName], [PhotoUrl], [Description], [EnableStatus], [AdminId])
+	VALUES (1, N'Stream one', N'Stream/1.jpg', N'General Stream', 1, 1)
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Stream] OFF
+GO
+
+--Table dbo.tbl_Subject
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_Subject] (
+	[SubjectId] [int] NOT NULL IDENTITY (1, 1),
+	[SubjectName] [nvarchar](50) NULL,
+	[StreamId] [int] NULL,
+	[PhotoUrl] [nvarchar](500) NULL,
+	[CSS] [nvarchar](500) NULL,
+	[EnableStatus] [int] NULL CONSTRAINT [DF__tbl_Subje__Enabl__29572725] DEFAULT ((1)),
+	[AdminId] [int] NULL,
+	[Description] [nvarchar](MAX) NULL);
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_Subject] ON
+GO
+INSERT INTO [dbo].[tbl_Subject] ([SubjectId], [SubjectName], [StreamId], [PhotoUrl], [CSS], [EnableStatus], [AdminId], [Description])
+	VALUES (1, N'Subject one', 1, N'Subject/1.jpg', NULL, 1, 1, N's1')
+
+GO
+INSERT INTO [dbo].[tbl_Subject] ([SubjectId], [SubjectName], [StreamId], [PhotoUrl], [CSS], [EnableStatus], [AdminId], [Description])
+	VALUES (2, N'Subject Two', 1, N'Subject/2.jpg', NULL, 1, 1, N's2')
+
+GO
+INSERT INTO [dbo].[tbl_Subject] ([SubjectId], [SubjectName], [StreamId], [PhotoUrl], [CSS], [EnableStatus], [AdminId], [Description])
+	VALUES (3, N'My', 1, N'Subject/3.jpg', NULL, 1, 1, N'My')
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Subject] OFF
+GO
+
+--Table dbo.tbl_TestInstruction
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_TestInstruction] (
+	[Id1] [int] NOT NULL IDENTITY (1, 1),
+	[TestInstruction] [nvarchar](MAX) NULL,
+	[InstructionType] [nvarchar](50) NULL,
+	[PhotoUrl] [nvarchar](500) NULL,
+	[Title] [nvarchar](50) NULL,
+	[AdminId] [int] NULL);
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_TestInstruction] ON
+GO
+INSERT INTO [dbo].[tbl_TestInstruction] ([Id1], [TestInstruction], [InstructionType], [PhotoUrl], [Title], [AdminId])
+	VALUES (16, NULL, N'Image', N'TestInstruction/16.png', N'MBA Instruction', 2)
+
+GO
+INSERT INTO [dbo].[tbl_TestInstruction] ([Id1], [TestInstruction], [InstructionType], [PhotoUrl], [Title], [AdminId])
+	VALUES (18, NULL, N'Image', N'TestInstruction/18.png', N'Msc & Bsc Inst set', 4)
+
+GO
+INSERT INTO [dbo].[tbl_TestInstruction] ([Id1], [TestInstruction], [InstructionType], [PhotoUrl], [Title], [AdminId])
+	VALUES (14, NULL, N'Image', N'TestInstruction/14.png', N'Btech Instructions', 1)
+
+GO
+INSERT INTO [dbo].[tbl_TestInstruction] ([Id1], [TestInstruction], [InstructionType], [PhotoUrl], [Title], [AdminId])
+	VALUES (17, N'Steps for taking the Test:<br />
+Step 1:<br />
+â€¢ Login to the Student Dashboard (:spoken-tutorial.org/participant/login/), Go<br />
+to Ongoing Test and click Enroll, The invigilator will mark the Attendance for<br />
+you.<br />
+Step 2:<br />
+â€¢ Please refresh your browser screen after the invigilator marks your attendance,<br />
+click Enter into Test in the Ongoing test tab. It will take you to a new window<br />
+(Spoken Tutorial Online Test Center).<br />
+Step 3:<br />
+â€¢ After you enter your Username and Password, you will see the Homepage where<br />
+you will get the list of Tests available for variuos FOSS / Courses. Click on the Test<br />
+which you want to give.<br />
+(Note: Read the instructions which apear on the screen.)<br />
+Step 4:<br />
+â€¢ Click on â€œAttempt Quiz Nowâ€. Then click on â€œStart Attemptâ€.<br />
+Step 5:<br />
+â€¢ At the end of the test, click on â€œFinish attemptâ€ in the Quiz Navigation Panel. You<br />
+will get to see â€œSummary of Attemptsâ€.<br />
+â€¢ It will also show if you missed any questions. You can click on â€œ Return to<br />
+attemptsâ€ or you can go back and attempt by clicking on the particular question<br />
+number.<br />
+Step 6:<br />
+â€¢ Confirm by clicking on â€œSubmit All and Finishâ€ once you have completed the<br />
+test.<br />
+â€¢ You will get your test score on the spot<br />', N'Text', NULL, N'BBA Instruction', 2)
+
+GO
+INSERT INTO [dbo].[tbl_TestInstruction] ([Id1], [TestInstruction], [InstructionType], [PhotoUrl], [Title], [AdminId])
+	VALUES (19, N'<ul>
+<li>sdfsbfsdfz</li>
+<li>sdg</li>
+<li>df</li>
+<li>gsdfg</li>
+<li>sdfgs<br />
+</li></ul>', N'Text', NULL, N'pradeep', 1)
+
+GO
+INSERT INTO [dbo].[tbl_TestInstruction] ([Id1], [TestInstruction], [InstructionType], [PhotoUrl], [Title], [AdminId])
+	VALUES (20, N'<div>sdfla;lsdfjl;asjdf;lasjdf;lasjdsldfhalskdfhlaskdfhaskdfhlaksdfhlasdf</div>
+<div>s</div>
+<div>fs</div>
+<div>afasd</div>
+<div>fasdf<br />
+</div>', N'Text', NULL, N'pradeep', 1)
+
+GO
+INSERT INTO [dbo].[tbl_TestInstruction] ([Id1], [TestInstruction], [InstructionType], [PhotoUrl], [Title], [AdminId])
+	VALUES (21, N'', N'Text', NULL, N'', 1)
+
+GO
+INSERT INTO [dbo].[tbl_TestInstruction] ([Id1], [TestInstruction], [InstructionType], [PhotoUrl], [Title], [AdminId])
+	VALUES (15, N'Instructions on taking an online test in Blackboard<br />
+Step 1. Check Your Browser Options before the Test to ensure that it is not set to disconnect after several minutes of inactivity.<br />
+<br />
+* The location of this setting depends on your browser. For example, in Internet Explorer 5, 6, 7 &amp; 8 it is located under Tools&gt;Internet Options&gt;Connections&gt;Settings&gt; Advanced<br />
+* If you have an Internet Service Provider that will break your connection if you don.t visit a new site after a certain period of time, then keep another window open and occasionally visit it and load a new page or refresh the page to keep your connection open.<br />
+<br />
+Step 2. Do Not Use the &quot;Back&quot; Button on Your Browser During the Test once you have begun taking the quiz. Instead, use the scroll bar to move back to check earlier questions.<br />
+Dont close the window of the test for any reason.<br />
+<br />
+If something goes wrong, send an e-mail to your professor immediately, documenting the exact problem and asking how you should proceed. Include your username and the course and section number.<br />
+<br />
+Step 3. Review All of Your Answers Before Submitting the Quiz. Make sure you have not accidentally changed your response to a question or made a typographic mistake.<br />
+<br />
+Step 4. When you are satisfied with the result make sure you finish by clicking the SUBMIT button at the bottom of the screen. Click the Submit Button ONLY ONCE!<br />
+After you submit the test answers, you will receive a score unless you have exceeded the time limit for the quiz.<br />
+<br />
+To Check Your Grades: Click &quot;Student Tools&quot; then &quot;Check your grade&quot;. You will see only your grades.<br />
+<br />
+Keep In Mind: It is important that you click the SUBMIT button every time you access an online assessment. Even if you are just logging on to print the quiz, you must click the submit button. Otherwise you will be locked out of the exam.<br />', N'Text', N'', N'ALl Branches Common', 1)
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_TestInstruction] OFF
+GO
+
+--Table dbo.tbl_Uni
+
+USE [db_JobMix]
+GO
+
+--Create table and its columns
+CREATE TABLE [dbo].[tbl_Uni] (
+	[Uni_Id] [int] NOT NULL IDENTITY (1, 1),
+	[Uni_Name] [nvarchar](50) NULL);
+GO
+
+SET IDENTITY_INSERT [dbo].[tbl_Uni] ON
+GO
+INSERT INTO [dbo].[tbl_Uni] ([Uni_Id], [Uni_Name])
+	VALUES (1, N'Rajsthan University')
+
+GO
+INSERT INTO [dbo].[tbl_Uni] ([Uni_Id], [Uni_Name])
+	VALUES (2, N'RTU')
+
+GO
+SET IDENTITY_INSERT [dbo].[tbl_Uni] OFF
+GO

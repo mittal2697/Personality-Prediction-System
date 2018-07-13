@@ -1,0 +1,164 @@
+﻿<%@ Page Title="Category Management" Language="C#" MasterPageFile="~/admin/Admin.master" AutoEventWireup="true"
+    CodeFile="Admin_Stream.aspx.cs" Inherits="admin_Admin_Stream" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <form id="form1" runat="server" class="main-content">
+    <div class="mainContent ">
+        <div class="main-content-inner">
+            <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li><i class="ace-icon fa fa-home home-icon"></i><a href="Admin_Home.aspx">Home</a> </li>
+                    <li>Question Management System </li>
+                    <li class="active">Category Management</li>
+                </ul>
+                <!--/.breadcrumb -->
+            </div>
+            <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="0">
+                <asp:View ID="View1" runat="server">
+                    <div class="row text-center admin-stream main-content">
+                        <div class="col-md-12">
+                            <div class="test">
+                                <h1>
+                                    Category Management</h1>
+                                
+                                <asp:LinkButton ID="lnk_Add_Question" runat="server" class="btn btn-inverse" CausesValidation="False"
+                                    OnClick="linkAdd_Click">Add Category</asp:LinkButton>
+                            </div>
+                            <div class="row">
+                                <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
+                                    <ItemTemplate>
+
+                                        <div class="col-md-3">
+                                            <div class="box-item">
+                                                <a href="Admin_Stream.aspx">
+                                                    <div class="img-sec">
+                                                        <img class="img-responsive" src='<%# Eval("PhotoUrl") %>'/></div>
+                                                    <div class="black-bg blk1 ">
+                                                        <div class="title">
+                                                            <h3>
+                                                                <asp:Label ID="lbl_StreamName" runat="server" Text='<%# Eval("StreamName") %>'></asp:Label></h3>
+                                                            <p>
+                                                                <asp:Label ID="lbl_Description" runat="server" Text='<%# Eval("Description") %>'></asp:Label>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <div class="clearfix"></div>
+                                                <div class="tools tools-bottom">
+                                                    <div class="hidden-sm hidden-xs btn-group">
+                                                        <%--<label>
+                                                            <input name="switch-field-1" class="ace ace-switch ace-switch-7" type="checkbox">
+                                                            <span class="lbl"></span>
+                                                        </label>--%>
+                                                        <asp:Label ID="lbl_Id" runat="server" Visible="false" Text='<%# Eval("StreamId") %>'></asp:Label>
+                                                        <asp:LinkButton ID="lnk_Edit" class="btn btn-sm btn-info" runat="server" CommandName="Edit"><i class="ace-icon fa fa-pencil bigger-120"></i></asp:LinkButton>
+                                                        <asp:LinkButton ID="lnk_Delete" class="btn btn-sm btn-danger" runat="server" CommandName="Delete"><i class="ace-icon fa fa-trash-o bigger-120"></i></asp:LinkButton>
+                                                        <asp:LinkButton ID="lnk_Status" runat="server" class="btn btn-inverse st1" CommandName="EnableStatus" Text='<%# Eval("EnableStatus1") %>'></asp:LinkButton>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                          
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                            </div>
+                        </div>
+                    </div>
+                </asp:View>
+                <asp:View ID="View2" runat="server">
+                    <div class="page-content">
+                        <div class="row">
+                            <!-- /.col -->
+                            <div class="col-md-12">
+                                <div class="body-logo">
+                                    <img src="assets/images/main-logo.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                        <!-- /Stream Management -->
+                        <div class="row text-center admin-stream">
+                            <!-- /Add Stream Management -->
+                            <div class="col-md-12 add-stream">
+                                <h1>
+                                    Category Management</h1>
+                                 
+                                 <asp:LinkButton ID="lnk_Back" class="btn btn-inverse" runat="server" onclick="btnback_Click" 
+                                 CausesValidation="False">Back</asp:LinkButton>
+                                <asp:Label ID="lbl_Opr" runat="server" Visible="False"></asp:Label>
+                                <asp:Label ID="lbl_Id" runat="server" Visible="False"></asp:Label>
+
+
+                                <div class="form-bg">
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <label class=" control-label no-padding-right" for="form-field-1">
+                                                Category Title
+                                            </label>
+
+                                            <asp:TextBox ID="txt_Question_Title" runat="server" class="col-xs-10 col-sm-8"  ></asp:TextBox>
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                                 ControlToValidate="txt_Question_Title" ErrorMessage="*"></asp:RequiredFieldValidator>
+                                            
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <label class=" control-label no-padding-right" for="form-field-1">
+                                                Description</label>
+                                                <asp:TextBox ID="txt_Description" runat="server" MaxLength="175" class="col-xs-10 col-sm-8" ></asp:TextBox>
+                                             
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                           
+                       
+                                            
+
+
+                                           <div class="col-sm-12">
+											<label class=" control-label no-padding-right" for="form-field-1"> Category Image </label>
+											<label class="ace-file-input">
+                                            <asp:FileUpload ID="FU_Question" runat="server" data-title="Choose"/>
+                                            <span class="ace-file-container" data-title="Choose"><span class="ace-file-name" data-title="No File ..."><i class=" ace-icon fa fa-upload"></i></span></span>
+                                            <a class="remove" href="#"><i class=" ace-icon fa fa-times"></i>
+                                            </a>
+                                            </label>
+										   <p class="size">Width:597px | Height:446px</p>
+                                        </div>
+                                         <div class="clearfix"></div>
+
+
+
+
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+
+                                  <asp:LinkButton ID="btn_Submit"  class="btn btn-info" runat="server" onclick="btn_Submit_Click" Text=" Submit" > Submit<i class="ace-icon fa fa-check bigger-110"></i> </asp:LinkButton>  
+                                 
+                                 <asp:Label ID="lbl_Msg" runat="server"></asp:Label>
+
+
+                                    
+                                </div>
+                            </div>
+                            <!-- /Paper Management -->
+                        </div>
+                    </div>
+                </asp:View>
+            </asp:MultiView>
+        </div>
+    </div>
+    </form>
+</asp:Content>
